@@ -1,4 +1,8 @@
 <?php
+/*
+ * Script that pulls all links to Police Beat pages available.
+ * Finds "Next" button and gets all pages from all pages it can fine.
+ */
 
 $domain = "http://www.wiscnews.com";
 $link = "/bdc/search/?f=html&t=article&l=25&s=start_time&sd=desc&sForm=false&c=news/local/crime_and_courts*&q=%23bdc&sHeading=Police+Beat&o=0&app[0]=editorial";
@@ -42,4 +46,4 @@ foreach($beatURLs as $url) {
 
 $doc->saveXML();
 chdir('../xml/');
-$doc->save("/var/www/bdpb/xml/links.xml");
+$doc->save("links.xml");
