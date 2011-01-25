@@ -33,11 +33,20 @@ $fileContents = preg_replace("/>\s+</", "><", $fileContents);
 $doc = new DOMDocument();
 $doc->loadXML($fileContents);
 
+$time = intval(substr($files[$fileNumber], 1));
+echo "<h2>".date("r", $time)."</h2>";
+
 $xml = $doc->documentElement;
 foreach ($xml->childNodes AS $p) {
-	echo "<p>";
-	echo $p->nodeValue;
-	echo "</p>";
+	$node = $p->nodeValue;
+	preg_match_all('%(.{3,30}?)\s(-|—|–)\s*(.*)%s', $node, $output);
+	
+	if (isset($output[1][0])) {
+		echo "<h3>{$output[1][0]}</h3>";
+		echo "<p>{$output[3][0]}</p>";
+	} else {
+		echo "<p>$node</p>";
+	}
 }
 
 echo "<ul>";
