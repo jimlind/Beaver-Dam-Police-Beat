@@ -13,7 +13,7 @@ $nextLink = true;
 while($nextLink) {
 	$html = file_get_contents("$domain$link");
 	//Links to Individual Pages
-	preg_match_all('%<a href="(/bdc/[^"]+)" title="Beaver Dam(.*)">Beaver Dam(.*)</a>%', $html, $links);
+	preg_match_all('%<a href="(/bdc/[^"]+)" title="Beaver Dam(.*)">Beaver Dam(?! Warrants)(.*)</a>%', $html, $links);
 	//Links to Previous and Next Article
 	preg_match_all('%<p class="search-paging">(\s*)<a href="([^"]+)">&laquo; Previous</a>(\s*)<a href="([^"]+)">Next &raquo;</a>(\s*)</p>%', $html, $nav);
 	$link = "";
