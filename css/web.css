@@ -1,0 +1,98 @@
+body {
+	font-family:'Droid Sans', arial, serif;
+	text-align:center;
+	background-color:#011826;
+}
+
+h1 {
+	color:#0468bf;
+	margin:0;
+	padding:8px 0 8px;
+	text-shadow: 2px 2px 2px #000;
+	font-size: 32px;
+}
+h2 {
+	margin:0;
+	padding:0;
+	font-size: 20px;
+}
+h3 {
+	color:8c031c;
+	margin:0;
+	padding:10px 0 4px;
+	font-size: 18px;
+	
+}
+
+p {
+	margin:0;
+	padding:4px 10px;
+	font-size:14px;
+}
+
+#main {
+	text-align:left;
+	width: 500px;
+	margin: 0 auto;
+	background-color:#f2f2f2;
+	padding: 20px;
+	position: relative;
+	border-radius: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+}
+
+#previous {
+	width:100px;
+	height:100px;
+	position:absolute;
+		top:0;
+		left:-120px;
+	border-radius: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+	background-image:url('../images/left-arrow-full.png');
+}
+#previous span {
+	display:none;
+}
+
+#next {
+	width:100px;
+	height:100px;
+	position:absolute;
+		top:0;
+		right:-120px;
+	border-radius: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+	background-image:url('../images/right-arrow-full.png');
+}
+#next span {
+	display:none;
+}
+
+#footer {
+	width:500px;
+	margin:0 auto;
+	list-style: none;
+	padding:0;
+}
+#footer li {
+	display:inline;
+	padding:4px;
+}
+#footer li a {
+	font-size:10px;
+	text-decoration: none;
+	color:#0468bf;
+}
+/*
+COLOR SCHEME
+white f2f2f2
+dark blue 011826
+mid blue 034c8c
+light blue 0468bf
+red 8c031c
+*/
+

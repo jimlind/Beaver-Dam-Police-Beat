@@ -1,16 +1,4 @@
 <?php
-/*
- * THIS HEADER GIVES YOU PROPER SYMBOL OUTPUT
- */
-
-echo "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>";
-echo "<head>";
-echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";
-echo "<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>";
-echo "<link rel='stylesheet' type='text/css' href='css/web.css'>"; 
-echo "</head>";
-echo "<body>";
-
 $files = array();
 $dir = opendir('./xml/');
 
@@ -38,8 +26,26 @@ $doc = new DOMDocument();
 $doc->loadXML($fileContents);
 
 $time = intval(substr($files[$fileNumber], 1));
+
+
+echo "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>";
+echo "<head>";
+echo "<title>Beaver Dam Police Beat for ".date("M jS Y - g:i a", $time)."</title>";
+echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";
+echo "<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>";
+echo "<link rel='stylesheet' type='text/css' href='css/web.css'>"; 
+echo "</head>";
+echo "<body>";
+
 echo "<h1>Beaver Dam Police Beat</h1>";
-echo "<h2>".date("r", $time)."</h2>";
+echo "<div id='main'>";
+if (isset($files[$fileNumber-1])) {
+	echo "<a id='previous' href='index.php?b=".$files[$fileNumber-1]."'><span>Previous</span></a>";
+}
+if (isset($files[$fileNumber+1])) {
+	echo "<a id='next' href='index.php?b=".$files[$fileNumber+1]."'><span>Next</span></a>";
+}
+echo "<h2>".date("l F j, Y, g:i a", $time)."</h2>";
 
 $xml = $doc->documentElement;
 foreach ($xml->childNodes AS $p) {
@@ -54,12 +60,13 @@ foreach ($xml->childNodes AS $p) {
 	}
 }
 
-echo "<ul>";
+echo "</div>";
+echo "<ul id='footer'>";
 if (isset($files[$fileNumber-1])) {
-	echo "<li><a href='display.php?b=".$files[$fileNumber-1]."'>Previous</a></li>";
+	echo "<li><a href='index.php?b=".$files[$fileNumber-1]."'>Previous</a></li>";
 }
 if (isset($files[$fileNumber+1])) {
-	echo "<li><a href='display.php?b=".$files[$fileNumber+1]."'>Next</a></li>";
+	echo "<li><a href='index.php?b=".$files[$fileNumber+1]."'>Next</a></li>";
 }
 echo "<ul>";
 echo "</body>";
