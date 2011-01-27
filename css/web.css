@@ -87,6 +87,9 @@ p {
 	text-decoration: none;
 	color:#0468bf;
 }
+#ios {
+	display:none;
+}
 /*
 COLOR SCHEME
 white f2f2f2

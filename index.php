@@ -34,6 +34,9 @@ echo "<title>Beaver Dam Police Beat for ".date("M jS Y - g:i a", $time)."</title
 echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>";
 echo "<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>";
 echo "<link rel='stylesheet' type='text/css' href='css/web.css'>"; 
+echo "<script src='js/jquery-1.4.4.min.js' type='text/javascript'></script>";
+echo "<script src='js/jquery.touchwipe.min.js' type='text/javascript'></script>";
+echo "<script src='js/web.js' type='text/javascript'></script>";
 echo "</head>";
 echo "<body>";
 
@@ -69,4 +72,5 @@ if (isset($files[$fileNumber+1])) {
 	echo "<li><a href='index.php?b=".$files[$fileNumber+1]."'>Next</a></li>";
 }
 echo "<ul>";
+echo "<p id='iOS'>Swipe Left or Right for Previous or Next</p>";
 echo "</body>";
