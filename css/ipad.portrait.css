@@ -1,0 +1,19 @@
+#main {
+	margin: 0 10px;
+	width: auto;
+}
+p{
+	font-size: 20px;
+}
+#next {
+	display: none;
+}
+#previous {
+	display: none;
+}
+#footer {
+	display: none;
+}
+#iOS {
+	display: block;
+}

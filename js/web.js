@@ -12,8 +12,8 @@ $(document).ready(function() {
 	});
 	
 	$(document).touchwipe({
-	    wipeLeft: function() { $("#previous").trigger('click'); },
-	    wipeRight: function() { $("#next").trigger('click') },
+	    wipeLeft: function() { $("#next").trigger('click'); },
+	    wipeRight: function() { $("#previous").trigger('click') },
 	    preventDefaultEvents: false
 	});
 });
