@@ -27,9 +27,7 @@ while($nextLink) {
 		$url = "$domain{$url}";
 		$html = file_get_contents($url);
 		preg_match_all('%<p class="byline">(.*)Posted: (.*m)\n*\r*%', $html, $byline);
-		$zone = date('I');
-		$zone = $zone == 1 ? "CDT" : "CST";
-		$time = strtotime($byline[2][0]." ".$zone);
+		$time = strtotime($byline[2][0]." CST");
 
 		$index = array_search("b$time.xml", $files);
 		if ($index === false) {
