@@ -27,8 +27,10 @@ while($nextLink) {
 		$url = "$domain{$url}";
 		$html = file_get_contents($url);
 		preg_match_all('%<p class="byline">(.*)Posted: (.*m)\n*\r*%', $html, $byline);
-		$time = strtotime($byline[2][0]);
-		
+		$zone = date('I');
+		$zone = $zone == 1 ? "CDT" : "CST";
+		$time = strtotime($byline[2][0]." ".$zone);
+
 		$index = array_search("b$time.xml", $files);
 		if ($index === false) {
 			preg_match_all('%<div id="blox-story-text">(.*?)</div>%s', $html, $paragraphs);
