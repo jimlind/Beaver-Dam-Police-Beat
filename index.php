@@ -11,6 +11,16 @@
 	$index = array_search("b$timestamp.xml", $files);
 	if ($index !== false) $fileNum = $index;
 
+	//Previous and Next links
+	$next = false;
+	$prev = false;
+	if (isset($files[$fileNum-1])) {
+		$prev = "index.php?b=" . substr($files[$fileNum-1], 1 ,10);
+	}
+	if (isset($files[$fileNum+1])) {
+		$next = "index.php?b=" . substr($files[$fileNum+1], 1, 10);		
+	}
+	
 	$time = intval(substr($files[$fileNum], 1));
 
 	echo "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>";
@@ -29,11 +39,11 @@
 	
 	echo "<h1>Beaver Dam Police Beat</h1>";
 	echo "<div id='main'>";
-	if (isset($files[$fileNum-1])) {
-		echo "<a id='previous' href='index.php?b=".$files[$fileNum-1]."'><span>Previous</span></a>";
+	if ($prev) {
+		echo "<a id='previous' href='$prev'><span>Previous</span></a>";
 	}
-	if (isset($files[$fileNum+1])) {
-		echo "<a id='next' href='index.php?b=".$files[$fileNum+1]."'><span>Next</span></a>";
+	if ($next) {
+		echo "<a id='next' href='$next'><span>Next</span></a>";
 	}
 	echo "<h2>".date("l F j, Y, g:i a", $time)."</h2>";
 	
@@ -61,12 +71,11 @@
 	echo "</div>";
 	echo "<p id='iOS'>Swipe Left or Right for Previous or Next</p>";
 	echo "<ul id='footer'>";
-	if (isset($files[$fileNum-1])) {
-		echo "<li><a href='index.php?b=".$files[$fileNum-1]."'>Previous</a></li>";
+	if ($prev) {
+		echo "<a id='previous' href='$prev'>Previous</a>";
 	}
-	if (isset($files[$fileNum+1])) {
-		echo "<li><a href='index.php?b=".$files[$fileNum+1]."'>Next</a></li>";
+	if ($next) {
+		echo "<a id='next' href='$next'>Next</a>";
 	}
-	echo "<ul>";
-	
+	echo "<ul>";	
 	echo "</body>";
