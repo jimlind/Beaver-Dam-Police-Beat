@@ -11,7 +11,7 @@
 	$index = array_search("b$timestamp.xml", $files);
 	if ($index !== false) $fileNum = $index;
 
-	$time = intval(substr($files[$fileNumber], 1));
+	$time = intval(substr($files[$fileNum], 1));
 
 	echo "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>";
 	echo "<head>";
