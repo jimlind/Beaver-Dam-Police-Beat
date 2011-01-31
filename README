@@ -1,3 +1,5 @@
 Beaver Dam Police Report App
 
-You'll have to create an xml directory for now.
+Bugs:
+Very old police reports appear more than once on occasion.
+	- They exist in the original data.  Some cleaning of the pull can easily fix it.
