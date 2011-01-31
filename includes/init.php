@@ -2,6 +2,7 @@
 define("ROOT", realpath(dirname(__FILE__) . "/../"));
 define("DATA_XML", ROOT . "/xml");
 define("DATA_CACHE", ROOT . "/cache");
+define("HOST_DOMAIN", "http://bdpb.spoontech.com");
 
 // Need access to the folders.  If we don't, just stop.
 if (!(is_dir(DATA_XML) && is_dir(DATA_CACHE) && is_writable(DATA_XML) && is_writable(DATA_CACHE))) {
