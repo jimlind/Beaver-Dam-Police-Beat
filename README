@@ -3,5 +3,7 @@ Beaver Dam Police Report App
 You'll need the PHP CURL library installed for the Twitter Class to work.
 
 Bugs:
+No Pause during Facebook and Twitter Updates.
+	- Grouped together they aren't as interesting.
 Very old police reports appear more than once on occasion.
 	- They exist in the original data.  Some cleaning of the pull can easily fix it.
