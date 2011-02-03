@@ -72,10 +72,10 @@
 	echo "<p id='iOS'>Swipe Left or Right for Previous or Next</p>";
 	echo "<ul id='footer'>";
 	if ($prev) {
-		echo "<a id='previous' href='$prev'>Previous</a>";
+		echo "<a href='$prev'>Previous</a>";
 	}
 	if ($next) {
-		echo "<a id='next' href='$next'>Next</a>";
+		echo "<a href='$next'>Next</a>";
 	}
 	echo "<ul>";	
 	echo "</body>";
