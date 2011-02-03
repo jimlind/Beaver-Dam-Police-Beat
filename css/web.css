@@ -1,28 +1,25 @@
 body {
+	background-color:#011826;
 	font-family:'Droid Sans', arial, serif;
 	text-align:center;
-	background-color:#011826;
 }
-
 h1 {
 	color:#0468bf;
+	font-size:32px;
 	margin:0;
 	padding:8px 0 8px;
-	font-size: 32px;
 }
 h2 {
+	font-size:20px;
 	margin:0;
 	padding:0;
-	font-size: 20px;
 }
 h3 {
 	color:8c031c;
+	font-size:18px;
 	margin:0;
 	padding:10px 0 4px;
-	font-size: 18px;
-	
 }
-
 p {
 	font-size:14px;
 	line-height:18px;
@@ -31,78 +28,79 @@ p {
 }
 
 #main {
-	text-align:left;
-	width: 500px;
-	margin: 0 auto;
 	background-color:#f2f2f2;
-	padding: 20px;
-	position: relative;
-	border-radius: 20px;
-		-moz-border-radius: 20px;
-		-webkit-border-radius: 20px;
+	border-radius:20px;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
+	margin:0 auto;
+	padding:20px;
+	position:relative;
+	text-align:left;
+	width:500px;
 }
 
 .highlight {
-	border:1px solid #e6e6e6;
-	border-radius: 10px;
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
-	background:#fafafa;
+	border:1px solid #d9d9d9;
+	border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+	background:#fcfcfc;
 	margin:8px 0 0 0;
 	padding:0 10px 5px;
 }
 
 #previous {
-	width:100px;
+	background-image:url('../images/left-arrow-full.png');
+	border-radius:20px;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
 	height:100px;
 	position:absolute;
 		top:0;
 		left:-120px;
-	border-radius: 20px;
-		-moz-border-radius: 20px;
-		-webkit-border-radius: 20px;
-	background-image:url('../images/left-arrow-full.png');
+	width:100px;
 }
 #previous span {
 	display:none;
 }
 
 #next {
-	width:100px;
+	background-image:url('../images/right-arrow-full.png');
+	border-radius:20px;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
 	height:100px;
 	position:absolute;
 		top:0;
 		right:-120px;
-	border-radius: 20px;
-		-moz-border-radius: 20px;
-		-webkit-border-radius: 20px;
-	background-image:url('../images/right-arrow-full.png');
+	width:100px;
 }
 #next span {
 	display:none;
 }
 
 #footer {
-	width:500px;
+	list-style:none;
 	margin:0 auto;
-	list-style: none;
 	padding:0;
+	width:500px;
 }
 #footer li {
 	display:inline;
 	padding:4px;
 }
 #footer li a {
+	color:#0468bf;
 	font-size:10px;
 	text-decoration: none;
-	color:#0468bf;
 }
 #ios {
 	color:#f2f2f2;
 	display:none;
 	font-size:16px;
-	padding: 10px;
+	padding:10px;
 }
+
 /*
 COLOR SCHEME
 white f2f2f2
