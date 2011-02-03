@@ -9,6 +9,7 @@
 	$facebook_app_secret = "";
 	
 	$goog_short_key = "";
+	$goog_analytics_key = "";
 	
 	// I keep my keys in a seperate file to keep them out of git
 	@include("keys.local.php");

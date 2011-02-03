@@ -1,5 +1,6 @@
 <?php
 	require "includes/init.php";
+	require "includes/keys.php";
 	
 	$fileObj = new Files(DATA_XML);
 	$files = $fileObj->getArray();
@@ -34,6 +35,21 @@
 	echo "<script src='js/jquery-1.4.4.min.js' type='text/javascript'></script>";
 	echo "<script src='js/jquery.touchwipe.min.js' type='text/javascript'></script>";
 	echo "<script src='js/web.js' type='text/javascript'></script>";
+	
+$googleAnalytics = <<<GAJSCRIPT
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '$goog_analytics_key']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+GAJSCRIPT;
+	
+	echo $googleAnalytics;	
 	echo "</head>";
 	echo "<body>";
 	
