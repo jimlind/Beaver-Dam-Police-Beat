@@ -24,9 +24,10 @@ h3 {
 }
 
 p {
+	font-size:14px;
+	line-height:18px;
 	margin:0;
 	padding:4px 10px;
-	font-size:14px;
 }
 
 #main {
@@ -39,6 +40,16 @@ p {
 	border-radius: 20px;
 		-moz-border-radius: 20px;
 		-webkit-border-radius: 20px;
+}
+
+.highlight {
+	border:1px solid #e6e6e6;
+	border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	background:#fafafa;
+	margin:8px 0 0 0;
+	padding:0 10px 5px;
 }
 
 #previous {
