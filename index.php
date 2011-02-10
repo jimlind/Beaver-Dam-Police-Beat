@@ -23,6 +23,7 @@
 	}
 	
 	$time = intval(substr($files[$fileNum], 1));
+	$link = "index.php?b=$time";
 
 	echo "<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>";
 	echo "<head>";
@@ -67,13 +68,15 @@ GAJSCRIPT;
 	$doc->load(DATA_XML . "/" . $files[$fileNum]);
 	$root = $doc->documentElement;
 	$node = $root->firstChild;
+	$t = 0;
 	
 	while ($node) {
 		switch ($node->nodeName) {
 			case "title":
 				$content = $node->firstChild;
 				$output = $content->nodeValue;
-				echo "<h3>$output</h3>";
+				echo "<h3><a href='$link#$t'>$output</a></h3>";
+				$t++;
 				break;
 			case "line":
 				$content = $node->firstChild;

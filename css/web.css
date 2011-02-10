@@ -20,6 +20,10 @@ h3 {
 	margin:0;
 	padding:10px 0 4px;
 }
+h3 a {
+	color:8c031c;
+	text-decoration:none;
+}
 p {
 	font-size:14px;
 	line-height:18px;
