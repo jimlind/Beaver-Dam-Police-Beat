@@ -18,13 +18,15 @@ $(document).ready(function() {
 	});
 	
 	var $url = window.location.toString();
-	var $index = parseInt($url.substr($url.lastIndexOf("#")+1));
+	var $symbol =  $url.lastIndexOf("#") > 0 ? "#" : ".";
+	
+	var $index = parseInt($url.substr($url.lastIndexOf($symbol)+1));
 	if ($index >= 0) {
 		var $head = $("#main h3:eq("+$index+")");
 		var $offset = $($head).offset().top - 35;
 		$('html,body').animate({scrollTop: $offset});
 		
-		var $content = $head.add($($head).nextUntil('h3'));		
+		var $content = $head.add($($head).nextUntil('h3'));
 		$content.wrapAll('<div class="highlight" />');
 	}
 });
