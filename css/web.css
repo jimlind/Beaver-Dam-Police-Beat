@@ -43,6 +43,10 @@ p {
 	width:500px;
 }
 
+.report {
+	position:relative;
+}
+
 .highlight {
 	border:1px solid #d9d9d9;
 	border-radius:10px;
@@ -51,6 +55,19 @@ p {
 	background:#fcfcfc;
 	margin:8px 0 0 0;
 	padding:0 10px 5px;
+}
+
+.fb {
+	height:20px;
+	padding:10px 0 0 0;
+	width:90px;
+	position:absolute;
+		right:0;
+		top:0;
+}
+
+.highlight .fb {
+	width:90px;
 }
 
 #previous {

@@ -22,11 +22,10 @@ $(document).ready(function() {
 	
 	var $index = parseInt($url.substr($url.lastIndexOf($symbol)+1));
 	if ($index >= 0) {
-		var $head = $("#main h3:eq("+$index+")");
-		var $offset = $($head).offset().top - 35;
-		$('html,body').animate({scrollTop: $offset});
+		var $div = $("#main div.report:eq("+$index+")");
+		var $offset = $($div).offset().top - 35;
+		$div.addClass("highlight");
 		
-		var $content = $head.add($($head).nextUntil('h3'));
-		$content.wrapAll('<div class="highlight" />');
+		$('html,body').animate({scrollTop: $offset});
 	}
 });
