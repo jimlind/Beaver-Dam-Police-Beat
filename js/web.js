@@ -33,6 +33,14 @@ $(document).ready(function() {
 		var $offset = $($div).offset().top - 35;
 		$div.addClass("highlight");
 		
+		var $share = ($url.lastIndexOf(".s.")+1);
+		if ($share >= 0) {
+			var image = $("<img class='fb_arrow' />").attr("src", "images/fb-share-arrow.png");
+			image.appendTo($div);
+			$offset -= 70;
+		}
 		$('html,body').animate({scrollTop: $offset});
 	}
+	
+	
 });

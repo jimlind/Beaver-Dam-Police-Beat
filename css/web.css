@@ -77,6 +77,12 @@ p {
 		top:10px;
 }
 
+.fb_arrow {
+	position:absolute;
+		right:22px;
+		top:-90px;
+}
+
 #previous {
 	background-image:url('../images/left-arrow-full.png');
 	border-radius:20px;
