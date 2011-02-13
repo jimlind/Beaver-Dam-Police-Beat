@@ -57,17 +57,24 @@ p {
 	padding:0 10px 5px;
 }
 
-.fb {
+.fb_share {
 	height:20px;
-	padding:10px 0 0 0;
+	margin:0;
+	padding:0;
+	width:58px;
+	position:absolute;
+		right:100px;
+		top:10px;
+}
+
+.fb_like {
+	height:20px;
+	margin:0;
+	padding:0;
 	width:90px;
 	position:absolute;
 		right:0;
-		top:0;
-}
-
-.highlight .fb {
-	width:90px;
+		top:10px;
 }
 
 #previous {

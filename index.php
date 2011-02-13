@@ -78,7 +78,8 @@
 		echo "<h3>";
 		echo "<a href='$link.$index'>{$seriesObj->title}</a>";
 		echo "</h3>" . PHP_EOL;
-		echo "<span class='fb'><fb:like href='" . HOST_DOMAIN . "$link.$index' show_faces='false' layout='button_count' width='90'></fb:like></span>" . PHP_EOL;
+		echo "<a class='fb_share' href='http://www.facebook.com/share.php?u=" . HOST_DOMAIN . "$link.$index'><img src='images/fb-share.png' width='55' height='20'></a>" . PHP_EOL;
+		echo "<span class='fb_like'><fb:like href='" . HOST_DOMAIN . "$link.$index' show_faces='false' layout='button_count' width='90'></fb:like></span>" . PHP_EOL;
 		
 		foreach ($seriesObj->lines as $line) {
 			echo "<p>$line</p>" .  PHP_EOL;

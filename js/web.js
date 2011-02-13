@@ -7,8 +7,15 @@ $(document).ready(function() {
 	
 	$("#previous, #next").bind('click', function(e) {
 		e.preventDefault();
-		var $link = $(e.target).attr('href');
+		var $link = $(this).attr('href');
 		window.location = $link;
+	});
+	
+	$(".fb_share").bind('click', function(e) {
+		e.preventDefault();
+		var $u = $(this).attr('href');
+		$u = $u.substr($u.lastIndexOf("http"));
+		window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent($u),'sharer','toolbar=0,status=0,width=626,height=436');
 	});
 	
 	$(document).touchwipe({
