@@ -63,6 +63,11 @@
 <body>
 
 <h1>Beaver Dam Police Beat</h1>
+<ul id="external_links">
+	<li><a href="http://www.facebook.com/apps/application.php?id=164140956966428">Facebook</a></li>
+	<li><a href="http://twitter.com/#!/bdpolicebeat">Twitter</a></li>
+	<li><a href="https://github.com/jimlind/Beaver-Dam-Police-Beat">Source Code</a></li>
+</ul>
 <div id="main">	
 <?php
 	if ($prev) {

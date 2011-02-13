@@ -7,7 +7,7 @@ h1 {
 	color:#0468bf;
 	font-size:32px;
 	margin:0;
-	padding:8px 0 8px;
+	padding:8px 0 0;
 }
 h2 {
 	font-size:20px;
@@ -29,6 +29,23 @@ p {
 	line-height:18px;
 	margin:0;
 	padding:4px 10px;
+}
+
+#external_links {
+	height:30px;
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+	width:500px;
+}
+#external_links li {
+	display:inline;
+	padding:4px;
+}
+#external_links li a {
+	color:#0468bf;
+	font-size:10px;
+	text-decoration: none;
 }
 
 #main {
