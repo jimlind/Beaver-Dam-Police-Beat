@@ -58,7 +58,7 @@
 			foreach ($messages_twitter as $index=>$message) {
 				$article = trim(preg_replace('/\s{2,}/', ' ', $message));
 				$goog = new Googl($goog_short_key);
-				$longUrl = HOST_DOMAIN . "index.php?" . $time . "." . $index;
+				$longUrl = HOST_DOMAIN . "index.php?b=" . $time . "." . $index;
 				$shortUrl = $goog->shorten($longUrl);
 				
 				$article = substr($article, 0, (140-strlen($shortUrl)-2));
@@ -70,8 +70,8 @@
 				$article = array(
 					"name" => $message['title'],
 					"description" => $message['line'],
-					"link" => HOST_DOMAIN . "index.php?" . $time . "." . $index,
-					"actions" => "{'name':'Share', 'link':'" . HOST_DOMAIN . "index.php?" . $time . ".s." . $index . "'}"
+					"link" => HOST_DOMAIN . "index.php?b=" . $time . "." . $index,
+					"actions" => "{'name':'Share', 'link':'" . HOST_DOMAIN . "index.php?b= " . $time . ".s." . $index . "'}"
 				);
 				$facebook->api("/$facebook_app_id/feed/", "post", $article);
 			}

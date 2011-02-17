@@ -7,6 +7,10 @@
 	
 	$fileNum = 0;
 	$timestamp = intval(@substr($_GET["b"], 0, 10));
+	if ($timestamp == 0 && !empty($_GET)) {
+		$keys = array_keys($_GET);
+		$timestamp = intval(@substr($keys[0], 0, 10));
+	}
 	
 	$index = array_search("b$timestamp.xml", $files);
 	if ($index !== false) $fileNum = $index;
@@ -32,12 +36,12 @@
 <title>Beaver Dam Police Beat for <?= date("M jS Y - g:i a", $time) ?></title>
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<link rel='stylesheet' type='text/css' href='css/web.css'>
+<link rel='stylesheet' type='text/css' href='css/web.css?t=<?= filemtime('css/web.css') ?>'>
 <link rel='stylesheet' media='only screen and (max-device-width: 1024px) and (orientation:portrait)' href='css/ipad.portrait.css' type='text/css' />
 <link rel='stylesheet' media='only screen and (max-device-width: 1024px) and (orientation:landscape)' href='css/ipad.landscape.css' type='text/css' />
 <script src='js/jquery-1.4.4.min.js' type='text/javascript'></script>
 <script src='js/jquery.touchwipe.min.js' type='text/javascript'></script>
-<script src='js/web.js' type='text/javascript'></script>
+<script src='js/web.js?t=<?= filemtime('js/web.js') ?>'>' type='text/javascript'></script>
 <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', '<?= $goog_analytics_key ?>']);
